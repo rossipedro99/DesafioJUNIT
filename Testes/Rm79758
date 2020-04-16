@@ -1,15 +1,44 @@
 RM 79758 - Pedro Henrique Rossi
 
 
-import static org.junit.jupiter.api.Assertions.*;
+public class JulgamentoPrisioneiro {
 
-import org.junit.jupiter.api.Test;
+	int PENA_INOCENCIA = 0;
 
-class PrisoneiroJunit {
+	int PENA_CONDENACAO_MUTUA = 5;
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	int PENA_CONDENACAO_INDIVIDUAL = 10;
+
+	int PENA_CONDENACAO_CUMPLICES = 1;
+
+	int calculaPena(String respostaPrisioneiroA, String respostaPrisioneiroB) {
+
+		if (respostaPrisioneiroA == "Culpado") {
+
+			if (respostaPrisioneiroB == "Culpado") {
+
+				return PENA_CONDENACAO_MUTUA;
+
+			} else {
+
+				return PENA_CONDENACAO_INDIVIDUAL;
+				
+			}
+
+		} else {
+
+			if (respostaPrisioneiroB == "Culpado") {
+
+				return PENA_CONDENACAO_CUMPLICES;
+
+			} else {
+
+				return PENA_INOCENCIA;
+
+			}
+
+		}
+
 	}
 
 }
