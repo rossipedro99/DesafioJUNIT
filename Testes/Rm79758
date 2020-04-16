@@ -11,8 +11,8 @@ class PrisoneiroJunit {
 
 	@Test
 	public void test() {
-		String respostaPrisioneiroA = "Culpado";
-		String respostaPrisioneiroB = "Culpado";
+		Resposta respostaPrisioneiroA = Resposta.DELACAO;
+		Resposta respostaPrisioneiroB = Resposta.DELACAO;
 		
 		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
 		
@@ -21,8 +21,8 @@ class PrisoneiroJunit {
 		int penasuspeitoA = jp.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
 		int penasuspeitoB = jp.calculaPena(respostaPrisioneiroB, respostaPrisioneiroA);
 		
-		Assert.assertEquals(5, penasuspeitoA);
-		Assert.assertEquals(5, penasuspeitoB);
+		Assert.assertEquals(15, penasuspeitoA);
+		Assert.assertEquals(15, penasuspeitoB);
 		
 		
 	}
