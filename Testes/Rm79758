@@ -1,0 +1,15 @@
+RM 79758 - Pedro Henrique Rossi
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class PrisoneiroJunit {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}
