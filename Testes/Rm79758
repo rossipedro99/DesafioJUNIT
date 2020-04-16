@@ -1,44 +1,30 @@
 RM 79758 - Pedro Henrique Rossi
 
 
-public class JulgamentoPrisioneiro {
+import static org.junit.jupiter.api.Assertions.*;
 
-	int PENA_INOCENCIA = 0;
+import org.junit.jupiter.api.Test;
 
-	int PENA_CONDENACAO_MUTUA = 5;
+import junit.framework.Assert;
 
-	int PENA_CONDENACAO_INDIVIDUAL = 10;
+class PrisoneiroJunit {
 
-	int PENA_CONDENACAO_CUMPLICES = 1;
-
-	int calculaPena(String respostaPrisioneiroA, String respostaPrisioneiroB) {
-
-		if (respostaPrisioneiroA == "Culpado") {
-
-			if (respostaPrisioneiroB == "Culpado") {
-
-				return PENA_CONDENACAO_MUTUA;
-
-			} else {
-
-				return PENA_CONDENACAO_INDIVIDUAL;
-				
-			}
-
-		} else {
-
-			if (respostaPrisioneiroB == "Culpado") {
-
-				return PENA_CONDENACAO_CUMPLICES;
-
-			} else {
-
-				return PENA_INOCENCIA;
-
-			}
-
-		}
-
+	@Test
+	public void test() {
+		String respostaPrisioneiroA = "Culpado";
+		String respostaPrisioneiroB = "Culpado";
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		
+		Assert.assertNotNull(jp);
+		
+		int penasuspeitoA = jp.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
+		int penasuspeitoB = jp.calculaPena(respostaPrisioneiroB, respostaPrisioneiroA);
+		
+		Assert.assertEquals(5, penasuspeitoA);
+		Assert.assertEquals(5, penasuspeitoB);
+		
+		
 	}
 
 }
