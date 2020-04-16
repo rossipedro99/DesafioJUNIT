@@ -1,0 +1,19 @@
+RM 79758 - Pedro Henrique Rossi
+
+Deu o erro: Resposta cannot be resolved 
+Como Resolver: Foi criado a Classe Resposta
+
+Deu erro: DELACAO cannot be resolved or is not a field	
+Como resolver: Criar o Ennum DELACAO
+
+Deu Erro The method calculaPena(Resposta, Resposta) in the type JulgamentoPrisioneiro is not applicable for the arguments (String, String)	PrisoneiroJunit.java
+Como Resolver: Trocar o Tipo String por Tipo Resposta na respostas do prisioneiro
+
+Deu Erro: Type mismatch: cannot convert from String to Resposta	PrisoneiroJunit.java	/DesafioJUNIT/src	line 11	Java Problem
+Como Resolver: Trocar o valor da string para Resposta.DELACAO
+
+
+Deu Erro: The type Assert is deprecated	PrisoneiroJunit.java	/DesafioJUNIT/src	line 21	Java Problem
+Como Resolver: Atualizar o valor do tempo de "Prissão" do Prisioneiro
+
+
